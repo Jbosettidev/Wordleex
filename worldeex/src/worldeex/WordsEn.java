@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class WordsEn {
-	public static final String[] words = {
+	public static final String[] wordsEn = {
 			    "ABIDE","ABOUT","ABOVE","ABUSE","ACTOR","ACUTE","ADAPT","ADMIN","ADMIT","ADOPT",
 			    "ADORE","ADULT","AFFIX","AFTER","AGAIN","AGENT","AGREE","AISLE","ALARM","ALBUM",
 			    "ALERT","ALIEN","ALIKE","ALIVE","ALLOW","ALONE","ALONG","ALOUD","ALTER","AMBER",
@@ -119,6 +119,6 @@ public class WordsEn {
 			};
 
 	 public static List<String> getWords() {
-	        return Arrays.asList(words);
+	        return Arrays.asList(wordsEn);
 	    }
 }

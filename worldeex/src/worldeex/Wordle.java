@@ -19,14 +19,14 @@ public class Wordle {
         System.out.println("Wordle\n");
         
         // Escolher uma palavra aleatória da lista WordsEn
-        int wIndex = random.nextInt(words.size()); // Corrigido para evitar IndexOutOfBoundsException
+        int wIndex = random.nextInt(words.size()); // Corrigido p ara evitar IndexOutOfBoundsException
         String correct = words.get(wIndex);
-        System.out.print(correct);
+        
         String guess = "";
         for (int round = 0; round < 6; round++) {
-            System.out.print("Guess > ");
-            guess = sc.nextLine().toUpperCase();
-
+	        System.out.print("Guess > ");
+	        guess = sc.nextLine().toUpperCase();
+        		
             if (guess.length() != correct.length()) {
                 System.out.println("Please enter a " + correct.length() + "-letter word.");
                 round--;
