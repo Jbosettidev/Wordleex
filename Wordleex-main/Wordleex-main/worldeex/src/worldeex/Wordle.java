@@ -8,7 +8,7 @@ public class Wordle {
         Random random = new Random();
         
         List<String> words = WordsEn.getWords();
-        Set<Character> letrasDigitadas = new HashSet<>(); 
+        Set<Character> wordsTyped = new HashSet<>(); 
 
         final String BG_GREEN = "\u001b[42m";
         final String BG_YELLOW = "\u001b[43m";
@@ -31,7 +31,7 @@ public class Wordle {
             }
 
             for (int i = 0; i < guess.length(); i++) {
-                letrasDigitadas.add(guess.charAt(i));
+                wordsTyped.add(guess.charAt(i));
             }
 
             String correctCopy = correct;
@@ -49,7 +49,7 @@ public class Wordle {
             System.out.println("");
 
             System.out.println("\nLetters typed until now:");
-            for (Character letra : letrasDigitadas) {
+            for (Character letra : wordsTyped) {
                 System.out.print(letra + " ");
             }
             System.out.println("\n");

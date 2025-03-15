@@ -11,3 +11,15 @@ GUI
 
 hospedar
 
+ |   jogar dnv
+ |   new main
+ |   classe jogo -> main
+
+classes novas
+
+ex.. 
+ 
+        String unicoCadas = ChoseCadas.choseCadasUnico(scanner, cpfValido, teleValido);
+        /\
+        ||
+        public static String choseCadasUnico(Scanner scanner, String cpfUser, String telefoneUser)
