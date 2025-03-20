@@ -3,8 +3,17 @@ package worldeex;
 import java.util.*;
 
 public class Wordle {
-    public static void main(String[] args) {
+    public static void main(String[] agrs) {
         Scanner sc = new Scanner(System.in);
+        String fullGame = Game.gameMidlle(sc);
+        String tryAgain = PlayAgain.again(sc,fullGame);
+       
+    }
+}
+
+class Game{
+    public static String gameMidlle(Scanner sc) {
+        
         Random random = new Random();
         
         List<String> words = WordsEn.getWords();
@@ -63,7 +72,21 @@ public class Wordle {
         if (!guess.equals(correct)) {
             System.out.println("You lose! The correct answer is: " + correct);
         }
-
-        sc.close();
+        return guess;
+    }
+}
+class PlayAgain{
+    public static String again(Scanner sc, String fullGame) {
+        while (true) { 
+            System.out.print("Do you wanna play again? ");
+            String wannaPlay = sc.next();
+            if(wannaPlay.equals("yes")){
+                Game.gameMidlle(sc);
+            }
+            else if(wannaPlay.equals("no")){
+                break;
+            }
+        }
+        return null;
     }
 }
