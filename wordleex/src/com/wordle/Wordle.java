@@ -1,9 +1,8 @@
-package com.wordle;
- 
+
 import java.util.*;
 
 public class Wordle {
-    public static void main(String[] agrs) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String fullGame = Game.gameMidlle(sc);
         while(true) {
@@ -24,9 +23,9 @@ class Game{
     public static String gameMidlle(Scanner sc) {
         
         Random random = new Random();
-        
+
         List<String> words = WordsEn.getWords();
-        Set<Character> wordsTyped = new HashSet<>(); 
+        Set<Character> wordsTyped = new HashSet<>();
 
         final String BG_GREEN = "\u001b[42m";
         final String BG_YELLOW = "\u001b[43m";
@@ -98,4 +97,8 @@ class PlayAgain{
         }
         return null;
     }
+}
+
+class wordsTyped{
+
 }
